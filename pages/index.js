@@ -3,7 +3,7 @@ import Head from "next/head";
 import { PageContent, PageWrapper } from "../src/components/pageWrapper/style";
 import Footer from "../src/components/footer";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -23,4 +23,6 @@ export default function Home() {
       </PageWrapper>
     </>
   );
-}
+};
+
+export default Home;

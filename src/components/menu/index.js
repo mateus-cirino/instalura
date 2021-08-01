@@ -1,6 +1,7 @@
-import Logo from "../../logo";
+import logoProjeto from "../../../public/pictures/logo-projeto.svg";
 import MenuWrapper from "./style";
 import Button from "../button/style";
+import Image from "next/image";
 
 const links = [
     {
@@ -21,7 +22,7 @@ const Menu = () => {
     return (
         <MenuWrapper>
             <MenuWrapper.LeftSide>
-                <Logo/>
+                <Image src={logoProjeto} alt="Logo Instalura" />
             </MenuWrapper.LeftSide>
             <MenuWrapper.CentralSide>
                 {links.map((link) => <li key={link.url}><a href={link.url}>{link.nome}</a></li>)}

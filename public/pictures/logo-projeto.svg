@@ -1,4 +1,3 @@
-const Logo = () => (
   <svg
     width="131"
     height="32"
@@ -43,6 +42,3 @@ const Logo = () => (
       fill="#070C0E"
     />
   </svg>
-);
-
-export default Logo;
