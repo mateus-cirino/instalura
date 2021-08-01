@@ -1,14 +1,14 @@
 import styled, { css } from "styled-components"
-import get from "lodash/get"
+import _get from "lodash/get"
 
 const ButtonGhost = css`
-    color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
+    color: ${({ theme, variant }) => _get(theme, `colors.${variant}.color`)};
     background-color: transparent;
 `;
 
 const ButtonDefault = css`
-  color: ${({ theme, variant }) => get(theme, `colors.${variant}.contrastText`)};
-  background-color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
+  color: ${({ theme, variant }) => _get(theme, `colors.${variant}.contrastText`)};
+  background-color: ${({ theme, variant }) => _get(theme, `colors.${variant}.color`)};
 `;
 
 const Button = styled.button`
