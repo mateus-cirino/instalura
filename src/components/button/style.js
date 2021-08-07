@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import _get from "lodash/get";
 import { propToStyle } from "../../theme/utils";
+import PropTypes from "prop-types";
 
 const ButtonGhost = css`
   color: ${({ theme, colorVariant }) =>
@@ -31,5 +32,12 @@ const Button = styled.button`
   ${propToStyle('margin')}
   ${propToStyle('display')}
 `;
+
+Button.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node]),
+  ghost: PropTypes.oneOfType([PropTypes.bool]),
+  margin: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  display: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+};
 
 export default Button;

@@ -35,7 +35,7 @@ const Menu = () => {
       <MenuWrapper.RightSide>
         <Button
           type="button"
-          ghost
+          ghost={true}
           typographyVariant="paragraph2"
           colorVariant="secondary.main"
         >
