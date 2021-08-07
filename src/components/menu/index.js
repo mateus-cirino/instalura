@@ -29,7 +29,7 @@ const Menu = () => {
       </MenuWrapper.LeftSide>
       <MenuWrapper.CentralSide>
         {links.map((link) => (
-          <Text key={link.url} textVariant="paragraph1" as="li">
+          <Text key={link.url} as="li">
             <a href={link.url}>{link.nome}</a>
           </Text>
         ))}
@@ -39,7 +39,6 @@ const Menu = () => {
           type="button"
           ghost
           colorVariant="secondary.main"
-          textVariant="paragraph1"
         >
           Entrar
         </Button>

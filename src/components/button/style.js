@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import _get from "lodash/get";
+import { breakpointsMedia } from "../../theme/utils";
 
 const ButtonGhost = css`
   color: ${({ theme, colorVariant }) =>
@@ -18,21 +19,46 @@ const Button = styled.button`
   border: 0;
   cursor: pointer;
   padding: 12px 26px;
-  font-weight: bold;
   opacity: 1;
-  font-size: ${({ theme, textVariant }) =>
-    _get(theme, `typographyVariants.${textVariant}.fontSize`)};
-  font-weight: ${({ theme, textVariant }) =>
-    _get(theme, `typographyVariants.${textVariant}.fontWeight`)};
-  line-height: ${({ theme, textVariant }) =>
-    _get(theme, `typographyVariants.${textVariant}.lineHeight`)};
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
   ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
-  &:hover,
-    &:focus {
-    opacity: 0.5;
-  }
+  ${({ theme }) => breakpointsMedia(
+    {
+      xs: css`
+        font-size: ${_get(
+          theme,
+          `typographyVariants.smallestException.fontSize`
+        )};
+        font-weight: ${_get(
+          theme,
+          `typographyVariants.smallestException.fontWeight`
+        )};
+        line-height: ${_get(
+          theme,
+          `typographyVariants.smallestException.lineHeight`
+        )};
+      `,
+      md: css`
+        font-size: ${_get(
+          theme,
+          `typographyVariants.paragraph1.fontSize`
+        )};
+        font-weight: ${_get(
+          theme,
+          `typographyVariants.paragraph1.fontWeight`
+        )};
+        line-height: ${_get(
+          theme,
+          `typographyVariants.paragraph1.lineHeight`
+        )};
+      `,
+    }
+  )}
 `;
 
 export default Button;

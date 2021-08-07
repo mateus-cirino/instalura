@@ -58,11 +58,6 @@ const typographyVariants = {
     fontWeight: "700",
     lineHeight: 1.25,
   },
-  titleXS: {
-    fontSize: "24px",
-    fontWeight: "500",
-    lineHeight: 1.25,
-  },
   subTitle: {
     fontSize: "24px",
     fontWeight: "500",
@@ -85,9 +80,18 @@ const typographyVariants = {
   },
 };
 
+const breakpoints = {
+  xs: 0,
+  sm: 480,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+};
+
 const theme = {
   colors,
   typographyVariants,
+  breakpoints,
   borderRadius: "12px",
   transition: "200ms ease-in-out",
 };

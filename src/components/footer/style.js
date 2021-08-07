@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { breakpointsMedia } from "../../theme/utils";
+import _get from "lodash/get";
 
 const FooterWrapper = styled.footer`
   padding: 14px;
