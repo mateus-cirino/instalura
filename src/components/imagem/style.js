@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { propToStyle } from "../../theme/utils";
 
 const ImagemWrapper = styled.div`
-    margin-right: ${({marginRight}) => marginRight ? marginRight : 0}px;
+    ${propToStyle('marginRight')}
 `;
 
 export default ImagemWrapper

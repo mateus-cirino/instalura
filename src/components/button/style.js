@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import _get from "lodash/get";
-import { breakpointsMedia } from "../../theme/utils";
+import { propToStyle } from "../../theme/utils";
 
 const ButtonGhost = css`
   color: ${({ theme, colorVariant }) =>
@@ -27,38 +27,9 @@ const Button = styled.button`
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
   ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
-  ${({ theme }) => breakpointsMedia(
-    {
-      xs: css`
-        font-size: ${_get(
-          theme,
-          `typographyVariants.smallestException.fontSize`
-        )};
-        font-weight: ${_get(
-          theme,
-          `typographyVariants.smallestException.fontWeight`
-        )};
-        line-height: ${_get(
-          theme,
-          `typographyVariants.smallestException.lineHeight`
-        )};
-      `,
-      md: css`
-        font-size: ${_get(
-          theme,
-          `typographyVariants.paragraph1.fontSize`
-        )};
-        font-weight: ${_get(
-          theme,
-          `typographyVariants.paragraph1.fontWeight`
-        )};
-        line-height: ${_get(
-          theme,
-          `typographyVariants.paragraph1.lineHeight`
-        )};
-      `,
-    }
-  )}
+  ${propToStyle('typographyVariant')}
+  ${propToStyle('margin')}
+  ${propToStyle('display')}
 `;
 
 export default Button;

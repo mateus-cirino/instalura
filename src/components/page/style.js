@@ -11,4 +11,5 @@ export const PageWrapper = styled.div`
 
 export const PageContent = styled.div`
     flex: 1;
+    margin: auto;
 `;

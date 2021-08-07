@@ -2,7 +2,6 @@ import logoProjeto from "../../../public/pictures/logo-projeto.svg";
 import MenuWrapper from "./style";
 import Button from "../button/style";
 import Image from "next/image";
-import StyledText from "../text/style";
 import Text from "../text/style";
 
 const links = [
@@ -24,12 +23,11 @@ const Menu = () => {
   return (
     <MenuWrapper>
       <MenuWrapper.LeftSide>
-        <StyledText />
         <Image src={logoProjeto} alt="Logo Instalura" />
       </MenuWrapper.LeftSide>
       <MenuWrapper.CentralSide>
         {links.map((link) => (
-          <Text key={link.url} as="li">
+          <Text key={link.url} as="li" typographyVariant="paragraph1">
             <a href={link.url}>{link.nome}</a>
           </Text>
         ))}
@@ -38,11 +36,12 @@ const Menu = () => {
         <Button
           type="button"
           ghost
+          typographyVariant="paragraph2"
           colorVariant="secondary.main"
         >
           Entrar
         </Button>
-        <Button type="button" colorVariant="primary.main">
+        <Button type="button" typographyVariant="paragraph2" colorVariant="primary.main">
           Cadastrar
         </Button>
       </MenuWrapper.RightSide>
