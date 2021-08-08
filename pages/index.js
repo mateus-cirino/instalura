@@ -4,6 +4,7 @@ import { PageContent, PageWrapper } from "../src/components/page/style";
 import Footer from "../src/components/footer";
 import Text from "../src/components/text/style";
 import Button from "../src/components/button/style";
+import { Grid } from "../src/components/grid/style";
 
 const Home = () => {
   return (
@@ -24,46 +25,54 @@ const Home = () => {
       <PageWrapper>
         <PageContent>
           <Menu />
-          <div style={{
-            padding: 10
-          }}>
-            <Text
-              as="h1"
-              typographyVariant="title"
-              colorVariant="tertiary.main"
-              textAlign={{
-                xs: "center",
-                md: "left",
-              }}
-            >
-              Compartilhe momentos e conecte-se com amigos
-            </Text>
-            <Text
-              as="p"
-              typographyVariant="paragraph1"
-              colorVariant="tertiary.light"
-              textAlign={{
-                xs: "center",
-                md: "left",
-              }}
-            >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industrys standard dummy text
-              ever since the 1500s.
-            </Text>
+          <Grid.Container>
+            <Grid.Row>
+              <Grid.Col colSize={{ xs: 12, md: 4 }} offSet={1}>
+                <Text
+                  as="h1"
+                  typographyVariant="title"
+                  colorVariant="tertiary.main"
+                  textAlign={{
+                    xs: "center",
+                    md: "left",
+                  }}
+                >
+                  Compartilhe momentos e conecte-se com amigos
+                </Text>
+                <Text
+                  as="p"
+                  typographyVariant="paragraph1"
+                  colorVariant="tertiary.light"
+                  textAlign={{
+                    xs: "center",
+                    md: "left",
+                  }}
+                >
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industrys
+                  standard dummy text ever since the 1500s.
+                </Text>
 
-            <Button
-              typographyVariant="paragraph1"
-              colorVariant="primary.main"
-              margin={{
-                xs: "auto",
-                md: "initial",
-              }}
-              display="block"
-            >
-              Cadastrar
-            </Button>
-          </div>
+                <Button
+                  typographyVariant="paragraph1"
+                  colorVariant="primary.main"
+                  margin={{
+                    xs: "auto",
+                    md: "initial",
+                  }}
+                  display="block"
+                >
+                  Cadastrar
+                </Button>
+              </Grid.Col>
+              <Grid.Col colSize={{ xs: 12, md: 6 }}>
+                <img
+                  style={{ display: "block", margin: "auto" }}
+                  src="https://bootcamp-alura-01-git-modulo01.omariosouto.vercel.app/images/phones.png"
+                />
+              </Grid.Col>
+            </Grid.Row>
+          </Grid.Container>
         </PageContent>
         <Footer />
       </PageWrapper>
