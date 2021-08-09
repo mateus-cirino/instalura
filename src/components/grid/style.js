@@ -14,12 +14,10 @@ const Col = styled.div`
         return propToStyle("flex");
       }
       if (typeof props.colSize === "object") {
+        props.flex = {};
         Object.keys(props.colSize).forEach((key) => {
-          props.colSize[key] = `0 0 ${(100 * props.colSize[key]) / 12}%`;
+          props.flex[key] = `0 0 ${(100 * props.colSize[key]) / 12}%`;
         });
-        props.flex = {
-          ...props.colSize,
-        };
         return propToStyle("flex");
       }
     }
@@ -31,12 +29,10 @@ const Col = styled.div`
         return propToStyle("maxWidth");
       }
       if (typeof props.colSize === "object") {
+        props.maxWidth = {};
         Object.keys(props.colSize).forEach((key) => {
-          props.colSize[key] = `${(100 * props.colSize[key]) / 12}%`;
+          props.maxWidth[key] = `${(100 * props.colSize[key]) / 12}%`;
         });
-        props.maxWidth = {
-          ...props.colSize,
-        };
         return propToStyle("maxWidth");
       }
     }
@@ -69,6 +65,7 @@ const Container = styled.div`
   ${breakpointsMedia({
     xs: css`
       max-width: initial;
+
       padding-right: 28px;
       padding-left: 28px;
     `,

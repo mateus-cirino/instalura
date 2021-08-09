@@ -2,13 +2,28 @@ import { createGlobalStyle } from "styled-components";
 import normalize from "normalize.css";
 
 export const GlobalStyle = createGlobalStyle`
-  ${normalize}
   * {
-    text-decoration: none;
-    color: black;
     font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
   }
-  display: flex;
+  ${normalize}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  /* Full height layout */
+  html, body {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+  }
+  #__next {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const colors = {

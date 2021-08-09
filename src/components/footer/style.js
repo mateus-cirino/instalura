@@ -3,36 +3,26 @@ import _get from "lodash/get";
 import { breakpointsMedia } from "../../theme/utils";
 
 const FooterWrapper = styled.footer`
+  padding: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px; 
+  border-radius: 4px;
   padding-right: 28px;
   padding-left: 28px;
-  padding-bottom: 28px;
-  padding-top: 28px;
   img {
     width: 58px;
     margin-right: 23px;
   }
   a {
     color: ${({ theme }) => theme.colors.primary.main.color};
-    transition: .3s;
+    text-decoration: none;
+    transition: 0.3s;
     &:hover,
     &:focus {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
-  ${breakpointsMedia({
-    xs: css`
-      flex-direction: column;
-    `,
-  })}
-  ${breakpointsMedia({
-    md: css`
-      flex-direction: row;
-    `,
-  })}
 `;
 
 export default FooterWrapper;
