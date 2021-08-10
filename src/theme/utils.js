@@ -7,7 +7,7 @@ const { breakpoints } = theme;
 export const breakpointsMedia = (cssByBreakpoint) => {
   const breakpointsName = Object.keys(cssByBreakpoint);
   return breakpointsName
-    .filter((it) => Object.prototype.hasOwnProperty(breakpoints, it)
+    .filter((it) => Object.prototype.hasOwnProperty.call(breakpoints, it))
     .map(
       (it) => css`
         @media only screen and (min-width: ${breakpoints[it]}px) {
@@ -17,7 +17,7 @@ export const breakpointsMedia = (cssByBreakpoint) => {
     );
 };
 
-const getTypographyVariant = ({ theme }, typographyVariant) => ({
+const getTypographyVariant = (typographyVariant) => ({
   fontSize: _get(theme, `typographyVariants.${typographyVariant}.fontSize`),
   fontWeight: _get(
     theme,
@@ -32,7 +32,7 @@ const getTypographyVariant = ({ theme }, typographyVariant) => ({
 export const propToStyle = (propName) => (props) => {
   const propValue = props[propName];
 
-  if (typeof propValue === 'string') {
+  if (typeof propValue === 'string' || typeof propValue === 'number') {
     if (propName === 'typographyVariant') {
       return getTypographyVariant(props, propValue);
     }
