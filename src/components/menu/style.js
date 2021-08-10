@@ -1,6 +1,5 @@
-import styled, { css } from "styled-components";
-import { breakpointsMedia } from "../../theme/utils";
-import _get from "lodash/get";
+import styled, { css } from 'styled-components';
+import { breakpointsMedia } from '../../theme/utils';
 
 const MenuWrapper = styled.nav`
   display: flex;
@@ -8,8 +7,8 @@ const MenuWrapper = styled.nav`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 18px;
-  padding-left: 28px;
-  padding-right: 28px;
+  padding-left: 14px;
+  padding-right: 14px;
   ${breakpointsMedia({
     md: css`
       justify-content: flex-start;

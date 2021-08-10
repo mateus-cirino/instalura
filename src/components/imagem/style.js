@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import { propToStyle } from "../../theme/utils";
-import PropTypes from "prop-types";
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { propToStyle } from '../../theme/utils';
 
 const ImagemWrapper = styled.div`
     ${propToStyle('marginRight')}
 `;
 
 ImagemWrapper.propTypes = {
-    marginRight: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  marginRight: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
-export default ImagemWrapper
+export default ImagemWrapper;
