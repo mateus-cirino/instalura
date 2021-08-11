@@ -32,7 +32,7 @@ const getTypographyVariant = (typographyVariant) => ({
 export const propToStyle = (propName) => (props) => {
   const propValue = props[propName];
 
-  if (typeof propValue === 'string' || typeof propValue === 'number') {
+  if (typeof propValue === 'string') {
     if (propName === 'typographyVariant') {
       return getTypographyVariant(props, propValue);
     }

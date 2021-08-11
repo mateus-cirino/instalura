@@ -9,7 +9,7 @@ const Col = styled.div`
   max-width: 100%;
   ${(props) => {
     if (props.colSize) {
-      if (typeof props.colSize === 'string' || typeof props.colSize === 'number') {
+      if (typeof props.colSize === 'string') {
         props.flex = `0 0 ${(100 * props.colSize) / 12}%`;
         return propToStyle('flex');
       }
@@ -23,7 +23,7 @@ const Col = styled.div`
   }}
   ${(props) => {
     if (props.colSize) {
-      if (typeof props.colSize === 'string' || typeof props.colSize === 'number') {
+      if (typeof props.colSize === 'string') {
         props.maxWidth = `${(100 * props.colSize) / 12}%`;
         return propToStyle('maxWidth');
       }
@@ -37,7 +37,7 @@ const Col = styled.div`
   }}
   ${(props) => {
     if (props.offSet) {
-      if (typeof props.offSet === 'string' || typeof props.offSet === 'number') {
+      if (typeof props.offSet === 'string') {
         props.marginLeft = `${(100 * props.offSet) / 12}%`;
         return propToStyle('marginLeft');
       }
