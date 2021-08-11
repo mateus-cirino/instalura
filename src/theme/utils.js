@@ -41,42 +41,40 @@ export const propToStyle = (propName) => (props) => {
     };
   }
 
-  if (typeof propValue === 'object') {
-    if (propName === 'typographyVariant') {
-      return breakpointsMedia({
-        ...(propValue.xs && {
-          xs: getTypographyVariant(props, propValue.xs),
-        }),
-        ...(propValue.sm && {
-          sm: getTypographyVariant(props, propValue.sm),
-        }),
-        ...(propValue.md && {
-          md: getTypographyVariant(props, propValue.md),
-        }),
-        ...(propValue.lg && {
-          lg: getTypographyVariant(props, propValue.lg),
-        }),
-        ...(propValue.xl && {
-          xl: getTypographyVariant(props, propValue.xl),
-        }),
-      });
-    }
+  if (propName === 'typographyVariant') {
     return breakpointsMedia({
       ...(propValue.xs && {
-        xs: { [propName]: propValue.xs },
+        xs: getTypographyVariant(props, propValue.xs),
       }),
       ...(propValue.sm && {
-        sm: { [propName]: propValue.sm },
+        sm: getTypographyVariant(props, propValue.sm),
       }),
       ...(propValue.md && {
-        md: { [propName]: propValue.md },
+        md: getTypographyVariant(props, propValue.md),
       }),
       ...(propValue.lg && {
-        lg: { [propName]: propValue.lg },
+        lg: getTypographyVariant(props, propValue.lg),
       }),
       ...(propValue.xl && {
-        xl: { [propName]: propValue.xl },
+        xl: getTypographyVariant(props, propValue.xl),
       }),
     });
   }
+  return breakpointsMedia({
+    ...(propValue.xs && {
+      xs: { [propName]: propValue.xs },
+    }),
+    ...(propValue.sm && {
+      sm: { [propName]: propValue.sm },
+    }),
+    ...(propValue.md && {
+      md: { [propName]: propValue.md },
+    }),
+    ...(propValue.lg && {
+      lg: { [propName]: propValue.lg },
+    }),
+    ...(propValue.xl && {
+      xl: { [propName]: propValue.xl },
+    }),
+  });
 };
