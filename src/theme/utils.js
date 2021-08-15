@@ -1,5 +1,4 @@
 import { css } from 'styled-components';
-import _get from 'lodash/get';
 import theme from '.';
 
 const { breakpoints } = theme;
