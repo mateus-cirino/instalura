@@ -16,25 +16,12 @@ export const breakpointsMedia = (cssByBreakpoint) => {
       `,
     );
 };
-
-const getTypographyVariant = (typographyVariant) => ({
-  fontSize: _get(theme, `typographyVariants.${typographyVariant}.fontSize`),
-  fontWeight: _get(
-    theme,
-    `typographyVariants.${typographyVariant}.fontWeight`,
-  ),
-  lineHeight: _get(
-    theme,
-    `typographyVariants.${typographyVariant}.lineHeight`,
-  ),
-});
-
 export const propToStyle = (propName) => (props) => {
   const propValue = props[propName];
 
   if (typeof propValue === 'string') {
     if (propName === 'typographyVariant') {
-      return getTypographyVariant(props, propValue);
+      return propValue;
     }
     return {
       [propName]: propValue,
@@ -45,19 +32,19 @@ export const propToStyle = (propName) => (props) => {
     if (propName === 'typographyVariant') {
       return breakpointsMedia({
         ...(propValue.xs && {
-          xs: getTypographyVariant(props, propValue.xs),
+          xs: propValue.xs,
         }),
         ...(propValue.sm && {
-          sm: getTypographyVariant(props, propValue.sm),
+          sm: propValue.sm,
         }),
         ...(propValue.md && {
-          md: getTypographyVariant(props, propValue.md),
+          md: propValue.md,
         }),
         ...(propValue.lg && {
-          lg: getTypographyVariant(props, propValue.lg),
+          lg: propValue.lg,
         }),
         ...(propValue.xl && {
-          xl: getTypographyVariant(props, propValue.xl),
+          xl: propValue.xl,
         }),
       });
     }
