@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
 import ModalWrapper from './style';
+import ModalMotion from './motion';
+import Box from '../box/style';
 
 const Modal = ({ isOpen, onClose, children }) => {
   const onClickModal = (event) => {
@@ -10,34 +11,22 @@ const Modal = ({ isOpen, onClose, children }) => {
       onClose();
     }
   };
+
   return (
     <ModalWrapper isOpen={isOpen} onClick={onClickModal}>
-      <motion.div
-        style={{
-          display: 'flex',
-          flex: 1,
-          width: '50%',
-          backgroundColor: 'white',
-        }}
-        variants={{
-          open: {
-            x: '0%',
-            opacity: 1,
-          },
-          close: {
-            x: '-100%',
-            opacity: 0,
-          },
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-        animate={isOpen ? 'open' : 'close'}
-      >
-        {children({
-          'data-modal-safe-area': 'true',
-        })}
-      </motion.div>
+      <ModalMotion isOpen={isOpen}>
+        <Box
+          width={{
+            xs: '100%',
+            md: '50%',
+          }}
+          backgroundColor="#2D2D2D"
+        >
+          {children({
+            'data-modal-safe-area': 'true',
+          })}
+        </Box>
+      </ModalMotion>
     </ModalWrapper>
   );
 };

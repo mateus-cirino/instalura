@@ -44,7 +44,7 @@ const Home = () => {
               // eslint-disable-next-line react/jsx-props-no-spreading
               <Box {...propsDoModal}>
                 <div>
-                  teste
+                  Lorem Ipsum
                 </div>
               </Box>
             )

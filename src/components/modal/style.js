@@ -26,6 +26,7 @@ const ModalWrapper = styled.div`
       pointer-events: none;
     `;
   }}
+  transition-duration: 500ms;
 `;
 
 ModalWrapper.propTypes = {
