@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const FooterWrapper = styled.footer`
+const FooterWrapperStyled = styled.footer`
   padding: 14px;
   display: flex;
   align-items: center;
@@ -14,4 +14,4 @@ const FooterWrapper = styled.footer`
   }
 `;
 
-export default FooterWrapper;
+export default FooterWrapperStyled;

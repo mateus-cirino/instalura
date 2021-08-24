@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import normalize from 'normalize.css';
 
-export const GlobalStyle = createGlobalStyle`
+export const ResetGlobalStyle = createGlobalStyle`
   * {
     font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
@@ -34,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const LockScroll = createGlobalStyle`
+export const LockScrollGlobalStyle = createGlobalStyle`
   body {
     overflow: hidden;
   }

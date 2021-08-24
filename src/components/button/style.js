@@ -13,7 +13,7 @@ const ButtonDefault = css`
   background-color: ${({ theme, colorVariant }) => _get(theme, `colors.${colorVariant}.color`)};
 `;
 
-const Button = styled.button`
+const ButtonStyled = styled.button`
   border: 0;
   cursor: pointer;
   padding: 12px 26px;
@@ -34,11 +34,11 @@ const Button = styled.button`
   ${propToStyle('display')}
 `;
 
-Button.propTypes = {
+ButtonStyled.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node]),
   ghost: PropTypes.oneOfType([PropTypes.bool]),
   margin: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   display: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
-export default Button;
+export default ButtonStyled;
