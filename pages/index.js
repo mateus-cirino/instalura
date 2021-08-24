@@ -41,8 +41,15 @@ const Home = () => {
         <Modal isOpen={modal} onClose={() => setModal(false)}>
           {
             (propsDoModal) => (
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              <Box {...propsDoModal}>
+              <Box
+                // eslint-disable-next-line react/jsx-props-no-spreading
+                {...propsDoModal}
+                width={{
+                  xs: '100%',
+                  md: '35%',
+                }}
+                backgroundColor="#2D2D2D"
+              >
                 <div>
                   Lorem Ipsum
                 </div>

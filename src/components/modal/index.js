@@ -15,17 +15,9 @@ const Modal = ({ isOpen, onClose, children }) => {
   return (
     <ModalWrapper isOpen={isOpen} onClick={onClickModal}>
       <ModalMotion isOpen={isOpen}>
-        <Box
-          width={{
-            xs: '100%',
-            md: '50%',
-          }}
-          backgroundColor="#2D2D2D"
-        >
-          {children({
-            'data-modal-safe-area': 'true',
-          })}
-        </Box>
+        {children({
+          'data-modal-safe-area': 'true',
+        })}
       </ModalMotion>
     </ModalWrapper>
   );
