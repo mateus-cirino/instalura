@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 import theme from '.';
 
-const { breakpoints } = theme;
+const { breakpoints, typographyVariants } = theme;
 
 export const breakpointsMedia = (cssByBreakpoint) => {
   const breakpointsName = Object.keys(cssByBreakpoint);
@@ -20,7 +20,7 @@ export const propToStyle = (propName) => (props) => {
 
   if (typeof propValue === 'string') {
     if (propName === 'typographyVariant') {
-      return propValue;
+      return typographyVariants[propValue];
     }
     return {
       [propName]: propValue,
@@ -31,19 +31,19 @@ export const propToStyle = (propName) => (props) => {
     if (propName === 'typographyVariant') {
       return breakpointsMedia({
         ...(propValue.xs && {
-          xs: propValue.xs,
+          xs: typographyVariants[propValue.xs],
         }),
         ...(propValue.sm && {
-          sm: propValue.sm,
+          sm: typographyVariants[propValue.sm],
         }),
         ...(propValue.md && {
-          md: propValue.md,
+          md: typographyVariants[propValue.md],
         }),
         ...(propValue.lg && {
-          lg: propValue.lg,
+          lg: typographyVariants[propValue.lg],
         }),
         ...(propValue.xl && {
-          xl: propValue.xl,
+          xl: typographyVariants[propValue.xl],
         }),
       });
     }

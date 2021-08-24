@@ -23,6 +23,7 @@ const Footer = () => (
         as="a"
         href="https://www.alura.com.br/"
         typographyVariant="paragraph1"
+        colorVariant="primary.main"
       >
         Bootcamp Alura JAM Stack
       </Text>

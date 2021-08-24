@@ -12,6 +12,8 @@ const Box = styled.div`
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
   ${propToStyle('backgroundColor')}
+  ${propToStyle('marginLeft')}
+  box-shadow: -10px 0px 24px rgba(7, 12, 14, 0.1);
 `;
 
 export default Box;

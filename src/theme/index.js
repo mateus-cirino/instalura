@@ -24,6 +24,20 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     width: 100%;
   }
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+`;
+
+export const LockScroll = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
 `;
 
 const colors = {

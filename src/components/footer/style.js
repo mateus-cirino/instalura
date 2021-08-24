@@ -12,15 +12,6 @@ const FooterWrapper = styled.footer`
     width: 58px;
     margin-right: 23px;
   }
-  a {
-    color: ${({ theme }) => theme.colors.primary.main.color};
-    text-decoration: none;
-    transition: 0.3s;
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-    }
-  }
 `;
 
 export default FooterWrapper;

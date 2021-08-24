@@ -9,6 +9,7 @@ import Grid from '../src/components/grid/style';
 import instaluraHome from '../public/pictures/instalura-home.png';
 import Box from '../src/components/box/style';
 import Modal from '../src/components/modal';
+import Form from '../src/components/form';
 
 const Home = () => {
   const [modal, setModal] = useState(false);
@@ -41,11 +42,17 @@ const Home = () => {
         <Modal isOpen={modal} onClose={() => setModal(false)}>
           {
             (propsDoModal) => (
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              <Box {...propsDoModal}>
-                <div>
-                  Lorem Ipsum
-                </div>
+              <Box
+                // eslint-disable-next-line react/jsx-props-no-spreading
+                {...propsDoModal}
+                width={{
+                  xs: '100%',
+                  md: '35%',
+                }}
+                marginLeft="auto"
+                backgroundColor="#FFFFFF"
+              >
+                <Form />
               </Box>
             )
           }
