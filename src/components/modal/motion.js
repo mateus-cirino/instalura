@@ -8,7 +8,7 @@ const ModalMotion = ({ isOpen, children }) => {
       x: '0%',
     },
     close: {
-      x: '-100%',
+      x: '100%',
     },
   };
 
@@ -31,7 +31,7 @@ const ModalMotion = ({ isOpen, children }) => {
 
 ModalMotion.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  children: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default ModalMotion;

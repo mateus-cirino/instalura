@@ -22,6 +22,10 @@ const Button = styled.button`
   &:focus {
     opacity: 0.5;
   }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .2;
+  }
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
   ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}

@@ -9,6 +9,7 @@ import Grid from '../src/components/grid/style';
 import instaluraHome from '../public/pictures/instalura-home.png';
 import Box from '../src/components/box/style';
 import Modal from '../src/components/modal';
+import Form from '../src/components/form';
 
 const Home = () => {
   const [modal, setModal] = useState(false);
@@ -48,56 +49,10 @@ const Home = () => {
                   xs: '100%',
                   md: '35%',
                 }}
+                marginLeft="auto"
                 backgroundColor="#FFFFFF"
               >
-                <Grid.Container
-                  display="flex"
-                  flexWrap="wrap"
-                  flexDirection="column"
-                >
-                  <Text
-                    as="h1"
-                    typographyVariant="title"
-                    colorVariant="tertiary.main"
-                    textAlign="center"
-                  >
-                    Pronto para saber da vida dos outros?
-                  </Text>
-                  <Text
-                    as="p"
-                    typographyVariant="paragraph1"
-                    colorVariant="tertiary.light"
-                    textAlign="center"
-                  >
-                    Você está a um passo de saber tudo o que
-                    está rolando no bairro, complete seu cadastro agora!
-                  </Text>
-                  <input />
-                  <input />
-                  <Button
-                    typographyVariant="paragraph1"
-                    colorVariant="primary.main"
-                  >
-                    Cadastrar
-                  </Button>
-                  <Text
-                    as="p"
-                    typographyVariant="paragraph1"
-                    colorVariant="tertiary.light"
-                    textAlign="center"
-                  >
-                    Já tem uma conta?
-                    {' '}
-                    <Text
-                      as="a"
-                      href="https://www.alura.com.br/"
-                      typographyVariant="paragraph1"
-                      colorVariant="primary.main"
-                    >
-                      Entrar
-                    </Text>
-                  </Text>
-                </Grid.Container>
+                <Form />
               </Box>
             )
           }
