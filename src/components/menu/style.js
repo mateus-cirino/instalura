@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../theme/utils';
 
-const MenuWrapper = styled.nav`
+const MenuWrapperStyled = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,7 +28,7 @@ const MenuWrapper = styled.nav`
   })}
 `;
 
-MenuWrapper.LeftSide = styled.div`
+MenuWrapperStyled.LeftSideStyled = styled.div`
   padding: 0;
   margin: 0;
   order: 1;
@@ -46,7 +46,7 @@ MenuWrapper.LeftSide = styled.div`
   })}
 `;
 
-MenuWrapper.CentralSide = styled.div`
+MenuWrapperStyled.CentralSideStyled = styled.div`
   padding: 0;
   margin: 0;
   order: 3;
@@ -86,7 +86,7 @@ MenuWrapper.CentralSide = styled.div`
   }
 `;
 
-MenuWrapper.RightSide = styled.div`
+MenuWrapperStyled.RightSideStyled = styled.div`
   padding: 0;
   margin: 0;
   display: flex;
@@ -100,4 +100,4 @@ MenuWrapper.RightSide = styled.div`
   })}
 `;
 
-export default MenuWrapper;
+export default MenuWrapperStyled;

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
-const ModalWrapper = styled.div`
+const ModalWrapperStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -29,8 +29,8 @@ const ModalWrapper = styled.div`
   transition-duration: 500ms;
 `;
 
-ModalWrapper.propTypes = {
+ModalWrapperStyled.propTypes = {
   isOpen: PropTypes.bool.isRequired,
 };
 
-export default ModalWrapper;
+export default ModalWrapperStyled;

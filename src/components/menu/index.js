@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import logoProjeto from '../../../public/pictures/logo-projeto.svg';
-import MenuWrapper from './style';
+import MenuWrapperStyled from './style';
 import Button from '../button/style';
-import Text from '../text/style';
+import TextStyled from '../text/style';
 
 const links = [
   {
@@ -21,18 +21,18 @@ const links = [
 ];
 
 const Menu = () => (
-  <MenuWrapper>
-    <MenuWrapper.LeftSide>
+  <MenuWrapperStyled>
+    <MenuWrapperStyled.LeftSideStyled>
       <Image src={logoProjeto} alt="Logo Instalura" />
-    </MenuWrapper.LeftSide>
-    <MenuWrapper.CentralSide>
+    </MenuWrapperStyled.LeftSideStyled>
+    <MenuWrapperStyled.CentralSideStyled>
       {links.map((link) => (
-        <Text key={link.url} as="li" typographyVariant="paragraph2">
+        <TextStyled key={link.url} as="li" typographyVariant="paragraph2">
           <a href={link.url}>{link.nome}</a>
-        </Text>
+        </TextStyled>
       ))}
-    </MenuWrapper.CentralSide>
-    <MenuWrapper.RightSide>
+    </MenuWrapperStyled.CentralSideStyled>
+    <MenuWrapperStyled.RightSideStyled>
       <Button
         type="button"
         ghost
@@ -44,8 +44,8 @@ const Menu = () => (
       <Button type="button" typographyVariant="paragraph2" colorVariant="primary.main">
         Cadastrar
       </Button>
-    </MenuWrapper.RightSide>
-  </MenuWrapper>
+    </MenuWrapperStyled.RightSideStyled>
+  </MenuWrapperStyled>
 );
 
 export default Menu;

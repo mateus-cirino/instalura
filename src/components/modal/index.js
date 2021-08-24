@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { LockScroll } from '../../theme';
+import { LockScrollGlobalStyle } from '../../theme';
 import ModalMotion from './motion';
-import ModalWrapper from './style';
+import ModalWrapperStyled from './style';
 
 const Modal = ({ isOpen, onClose, children }) => {
   const onClickModal = (event) => {
@@ -13,14 +13,14 @@ const Modal = ({ isOpen, onClose, children }) => {
   };
 
   return (
-    <ModalWrapper isOpen={isOpen} onClick={onClickModal}>
+    <ModalWrapperStyled isOpen={isOpen} onClick={onClickModal}>
       <ModalMotion isOpen={isOpen}>
-        { isOpen && <LockScroll /> }
+        { isOpen && <LockScrollGlobalStyle /> }
         {children({
           'data-modal-safe-area': 'true',
         })}
       </ModalMotion>
-    </ModalWrapper>
+    </ModalWrapperStyled>
   );
 };
 
