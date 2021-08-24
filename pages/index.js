@@ -48,11 +48,56 @@ const Home = () => {
                   xs: '100%',
                   md: '35%',
                 }}
-                backgroundColor="#2D2D2D"
+                backgroundColor="#FFFFFF"
               >
-                <div>
-                  Lorem Ipsum
-                </div>
+                <Grid.Container
+                  display="flex"
+                  flexWrap="wrap"
+                  flexDirection="column"
+                >
+                  <Text
+                    as="h1"
+                    typographyVariant="title"
+                    colorVariant="tertiary.main"
+                    textAlign="center"
+                  >
+                    Pronto para saber da vida dos outros?
+                  </Text>
+                  <Text
+                    as="p"
+                    typographyVariant="paragraph1"
+                    colorVariant="tertiary.light"
+                    textAlign="center"
+                  >
+                    Você está a um passo de saber tudo o que
+                    está rolando no bairro, complete seu cadastro agora!
+                  </Text>
+                  <input />
+                  <input />
+                  <Button
+                    typographyVariant="paragraph1"
+                    colorVariant="primary.main"
+                  >
+                    Cadastrar
+                  </Button>
+                  <Text
+                    as="p"
+                    typographyVariant="paragraph1"
+                    colorVariant="tertiary.light"
+                    textAlign="center"
+                  >
+                    Já tem uma conta?
+                    {' '}
+                    <Text
+                      as="a"
+                      href="https://www.alura.com.br/"
+                      typographyVariant="paragraph1"
+                      colorVariant="primary.main"
+                    >
+                      Entrar
+                    </Text>
+                  </Text>
+                </Grid.Container>
               </Box>
             )
           }

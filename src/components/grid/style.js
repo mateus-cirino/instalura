@@ -59,6 +59,10 @@ const Container = styled.div`
   padding-left: 28px;
   margin-right: auto;
   margin-left: auto;
+  ${propToStyle('display')}
+  ${propToStyle('flex')}
+  ${propToStyle('flexDirection')}
+  ${propToStyle('flexWrap')}
   ${breakpointsMedia({
     xs: css`
       max-width: initial;

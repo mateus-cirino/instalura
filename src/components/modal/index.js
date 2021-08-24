@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import ModalWrapper from './style';
+import React from 'react';
+import { LockScroll } from '../../theme';
 import ModalMotion from './motion';
-import Box from '../box/style';
+import ModalWrapper from './style';
 
 const Modal = ({ isOpen, onClose, children }) => {
   const onClickModal = (event) => {
@@ -15,6 +15,7 @@ const Modal = ({ isOpen, onClose, children }) => {
   return (
     <ModalWrapper isOpen={isOpen} onClick={onClickModal}>
       <ModalMotion isOpen={isOpen}>
+        { isOpen && <LockScroll /> }
         {children({
           'data-modal-safe-area': 'true',
         })}
