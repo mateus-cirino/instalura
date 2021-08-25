@@ -32,6 +32,7 @@ const ButtonStyled = styled.button`
   ${propToStyle('typographyVariant')}
   ${propToStyle('margin')}
   ${propToStyle('display')}
+  ${propToStyle('marginLeft')}
 `;
 
 ButtonStyled.propTypes = {
