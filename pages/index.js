@@ -52,6 +52,7 @@ const Home = () => {
                 marginLeft="auto"
                 backgroundColor="#FFFFFF"
               >
+                { propsDoModal.CloseButton }
                 <Form />
               </BoxStyled>
             )
