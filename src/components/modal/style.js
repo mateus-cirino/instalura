@@ -12,7 +12,7 @@ const ModalWrapperStyled = styled.div`
   right: 0;
   bottom: 0;
   margin: auto;
-  overflow: hidden;
+  overflow-y: scroll;
   z-index: 100;
   ${({ isOpen }) => {
     if (isOpen) {
