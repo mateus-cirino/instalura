@@ -27,7 +27,14 @@ const Menu = () => (
     </MenuWrapperStyled.LeftSideStyled>
     <MenuWrapperStyled.CentralSideStyled>
       {links.map((link) => (
-        <TextStyled key={link.url} as="li" typographyVariant="paragraph2">
+        <TextStyled
+          key={link.url}
+          as="li"
+          typographyVariant={{
+            xs: 'smallestException',
+            md: 'paragraph2',
+          }}
+        >
           <a href={link.url}>{link.nome}</a>
         </TextStyled>
       ))}
@@ -36,12 +43,22 @@ const Menu = () => (
       <Button
         type="button"
         ghost
-        typographyVariant="paragraph2"
+        typographyVariant={{
+          xs: 'smallestException',
+          md: 'paragraph2',
+        }}
         colorVariant="secondary.main"
       >
         Entrar
       </Button>
-      <Button type="button" typographyVariant="paragraph2" colorVariant="primary.main">
+      <Button
+        type="button"
+        typographyVariant={{
+          xs: 'smallestException',
+          md: 'paragraph2',
+        }}
+        colorVariant="primary.main"
+      >
         Cadastrar
       </Button>
     </MenuWrapperStyled.RightSideStyled>
