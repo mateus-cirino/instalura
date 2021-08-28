@@ -14,6 +14,10 @@ import Form from '../src/components/form';
 const Home = () => {
   const [modal, setModal] = useState(false);
 
+  const openModal = () => setModal(true);
+
+  const closeModal = () => setModal(false);
+
   return (
     <>
       <BoxStyled
@@ -39,7 +43,7 @@ const Home = () => {
           />
           <title>Instalura</title>
         </Head>
-        <Modal isOpen={modal} onClose={() => setModal(false)}>
+        <Modal isOpen={modal} onClose={closeModal}>
           {
             (propsDoModal) => (
               <BoxStyled
@@ -58,7 +62,7 @@ const Home = () => {
             )
           }
         </Modal>
-        <Menu />
+        <Menu onClickButtonCadastrar={openModal} />
         <Grid.ContainerStyled>
           <Grid.RowStyled>
             <Grid.ColStyled colSize={{ xs: 12, md: 5 }} offSet={{ md: 1 }}>
@@ -95,7 +99,7 @@ const Home = () => {
                   md: 'initial',
                 }}
                 display="block"
-                onClick={() => setModal(true)}
+                onClick={openModal}
               >
                 Cadastrar
               </ButtonStyled>
