@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 import logoProjeto from '../../../public/pictures/logo-projeto.svg';
 import MenuWrapperStyled from './style';
 import Button from '../button/style';
@@ -20,7 +21,7 @@ const links = [
   },
 ];
 
-const Menu = () => (
+const Menu = ({ onClickButtonCadastrar }) => (
   <MenuWrapperStyled>
     <MenuWrapperStyled.LeftSideStyled>
       <Image src={logoProjeto} alt="Logo Instalura" />
@@ -58,11 +59,16 @@ const Menu = () => (
           md: 'paragraph2',
         }}
         colorVariant="primary.main"
+        onClick={onClickButtonCadastrar}
       >
         Cadastrar
       </Button>
     </MenuWrapperStyled.RightSideStyled>
   </MenuWrapperStyled>
 );
+
+Menu.propTypes = {
+  onClickButtonCadastrar: PropTypes.func.isRequired,
+};
 
 export default Menu;
