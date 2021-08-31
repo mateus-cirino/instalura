@@ -24,7 +24,7 @@ const Modal = ({ isOpen, onClose, children }) => {
   return (
     <ModalWrapperStyled isOpen={isOpen} onClick={onClickModal}>
       <ModalMotion isOpen={isOpen}>
-        { isOpen && <LockScrollGlobalStyle /> }
+        { isOpen  }
         {children({
           'data-modal-safe-area': 'true',
           CloseButton,
